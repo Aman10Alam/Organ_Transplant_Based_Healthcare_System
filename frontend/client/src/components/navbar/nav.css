@@ -48,3 +48,18 @@
     background-color: #4CAF50;
     color: white;
 }
+
+.logoutbtn{
+    background-color: rgb(220, 78, 78);
+}
+
+.logoutbtn:hover{
+    background-color: rgb(236, 16, 16);
+}
+
+.hosname{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: rgb(239, 239, 24);
+}

@@ -31,19 +31,13 @@ const Navigation=()=> {
   return (
     <div className="md:flex justify-center py-3 items-center space-x-3  hidden">
         <Toaster/>
+
       <NavLink
-        to="/home"
+        to="/"
         className="hover:text-gray-100  px-3 py-2 rounded-md font-bold hover:bg-gray-600 text-gray-100 transition-all flex items-center"
       >
         <CgMenuGridO className="mr-1 text-xl" />
         Home
-      </NavLink>
-      <NavLink
-        to="/about"
-        className= " hover:text-gray-100 px-3 py-2 rounded-md font-bold hover:bg-gray-600 text-gray-100 transition-all flex items-center"
-      >
-        <BsInfoCircle className="mr-1 text-xl " />
-        About
       </NavLink>
 
 
@@ -63,35 +57,21 @@ const Navigation=()=> {
       </NavLink>
 
       <NavLink
-        to="/therapists"
-        
         className="hover:text-gray-100 px-3 py-2 rounded-md font-bold hover:bg-gray-600 text-gray-100 transition-all flex items-center"
       >
-        <ImUser className="mr-1 text-xl" />
-        Doctors
+       <ImUser className="mr-1 text-xl" />
+        <div className="dropdown">
+            <button className="dropbtn" onClick={toggleDropdown}>Doctors</button>
+            {isOpen && (
+                <div className="dropdown-content">
+                    <NavLink to="/add-doctor">Add doctor</NavLink>
+                    <NavLink to="/view-doctors">View doctors</NavLink>
+                </div>
+            )}
+        </div>
       </NavLink>
-      { true ? (
-        <NavLink
-          to="/profile"
-          
-          className="hover:text-gray-100 px-3 py-2 rounded-md font-bold hover:bg-gray-600 text-gray-100 transition-all flex items-center "
-        >
-          <CgProfile className="mr-1 text-xl" />
-          Profile
-        </NavLink>
-      ) : (
-        <NavLink
-          to="/account"
-          
-          className="hover:text-gray-100 px-3 py-2 rounded-md font-bold hover:bg-gray-600 text-gray-100 transition-all flex items-center "
-        >
-          <AiOutlineUser className="mr-1 text-xl" />
-          Account
-        </NavLink>
-        )      
-      }
 
-      <button  onClick={handleLogout} className="bg-red-400 rounded px-2 py-2">
+      <button  onClick={handleLogout} className="logoutbtn rounded px-2 py-2">
         Logout
       </button>
     </div>

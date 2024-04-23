@@ -6,7 +6,7 @@ import { themeJson } from "./theme";
 import "./index.css";
 import { json } from "./json";
 
-function SurveyComponent() {
+function AddPatient() {
     const survey = new Model(json);
     survey.applyTheme(themeJson);
     survey.onComplete.add((sender, options) => {
@@ -15,4 +15,4 @@ function SurveyComponent() {
     return (<Survey model={survey} />);
 }
 
-export default SurveyComponent;
+export default AddPatient;

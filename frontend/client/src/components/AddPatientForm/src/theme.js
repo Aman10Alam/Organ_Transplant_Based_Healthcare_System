@@ -1,4 +1,4 @@
-import medical from "../public/medical.jpeg"
+import medical from "../public/med2.jpeg"
 
 export const themeJson = {
   cssVariables: {
@@ -115,10 +115,10 @@ export const themeJson = {
   themeName: "default",
   colorPalette: "light",
   header: {
-    height: 320,
+    height: 200,
     inheritWidthFrom: "container",
     textAreaWidth: 424,
-    backgroundImage:medical,
+    backgroundImage: medical,
     backgroundImageOpacity: 1,
     backgroundImageFit: "cover",
     logoPositionX: "right",
